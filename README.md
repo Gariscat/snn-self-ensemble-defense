@@ -1,6 +1,4 @@
-# Binary SNN Attack
-
-This is the responsory for the paper "Exploring Vulnerabilities in Spiking Neural Networks: Direct Adversarial Attacks on Raw Event Data".
+This is responsory is modified from the repo of the paper "Exploring Vulnerabilities in Spiking Neural Networks: Direct Adversarial Attacks on Raw Event Data", from ECCV 2024.
 
 ## Requirements
 
