@@ -17,7 +17,6 @@ To install all the requirements, run:
 pip install -r requirements.txt
 ```
 
-or you can choose to install them one by one.
 
 ## File Structure
 
@@ -32,8 +31,8 @@ or you can choose to install them one by one.
 - `train.py`: train code.
 - `README.md`: this file.
 
-## Usage
+## Training
+Use ```train.py``` and pass ```dataset.frame_number={x-y-z}``` to control the desired latencies.
 
-The config and arguments are managed using [Hydra](https://hydra.cc/). To set the parameters, edit the `config.py` file, or use the command line arguments, details are in the `config/readme.md` file.
-Before you can run the code, you may need a wandb account. If you don't use wandb, you can set it up in the main.py file
-os.environ["WANDB_MODE"] = "disabled", which is set to "online" if used.
+## Attack
+Use ```main.py``` and pass the same argument as above. If the model is trained on multiple latencies, then the Self-Ensemble defense is conducted automatically after each successful attack (on single latency). Please use ```attack.init_alpha_mode``` and ```attack.add_position_label_mode``` to control the attacker's behavior.
